@@ -10,6 +10,7 @@
   "author": "Dave Jensen and Andrew Jensen",
   "license": "MIT",
   "dependencies": {
-    "midi": "^0.9.5"
+    "midi": "^0.9.5",
+    "node-hue-api": "^2.2.0"
   }
 }
