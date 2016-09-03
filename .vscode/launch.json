@@ -25,7 +25,7 @@
             "preLaunchTask": null,
             "runtimeExecutable": null,
             "runtimeArgs": [
-                "--nolazy"
+                "padKONTROL PORT A"
             ],
             "env": {
                 "NODE_ENV": "development"
