@@ -12,5 +12,8 @@
   "dependencies": {
     "midi": "^0.9.5",
     "node-hue-api": "^2.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.0.2"
   }
 }
