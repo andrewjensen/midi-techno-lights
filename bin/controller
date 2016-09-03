@@ -1,10 +1,13 @@
 #!/usr/bin/env node
 
-const app = require('../lib/index.js');
+const app = require('../lib');
+const utils = require('../lib/utils');
 
-const INPUT_DEVICE_NAME = 'padKONTROL PORT A';
-
-app.start(INPUT_DEVICE_NAME);
+utils.chooseMidiInputDevice()
+  .then(inputDeviceName => {
+    console.log(`Listening for MIDI input from ${inputDeviceName}`);
+    app.start(inputDeviceName);
+  });
 
 process.on('SIGTERM', onExit);
 
