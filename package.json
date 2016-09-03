@@ -1,0 +1,11 @@
+{
+  "name": "midi-techno-lights",
+  "version": "0.1.0",
+  "description": "A command-line app that makes MIDI messages control flashing LED lights.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dave Jensen and Andrew Jensen",
+  "license": "MIT"
+}
