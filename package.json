@@ -4,8 +4,12 @@
   "description": "A command-line app that makes MIDI messages control flashing LED lights.",
   "main": "index.js",
   "scripts": {
+    "start": "./bin/controller 'padKONTROL PORT A'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Dave Jensen and Andrew Jensen",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "midi": "^0.9.5"
+  }
 }

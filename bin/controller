@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+const app = require('../lib/index.js');
+
+const INPUT_DEVICE_NAME = 'padKONTROL PORT A';
+
+app.start(INPUT_DEVICE_NAME);
+
+process.on('SIGTERM', onExit);
+
+function onExit() {
+  console.log('Exiting.');
+	app.stop();
+}
