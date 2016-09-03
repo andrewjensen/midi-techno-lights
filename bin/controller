@@ -3,11 +3,24 @@
 const app = require('../lib');
 const utils = require('../lib/utils');
 
-utils.chooseMidiInputDevice()
-  .then(inputDeviceName => {
-    console.log(`Listening for MIDI input from ${inputDeviceName}`);
-    app.start(inputDeviceName);
-  });
+if (process.argv.length === 3) {
+  const inputDeviceName = process.argv[2];
+  run(inputDeviceName);
+} else {
+  runInteractively();
+}
+
+function runInteractively() {
+  utils.chooseMidiInputDevice()
+    .then(inputDeviceName => {
+      run(inputDeviceName);
+    });
+}
+
+function run(inputDeviceName) {
+  console.log(`Listening for MIDI input from ${inputDeviceName}`);
+  app.start(inputDeviceName);
+}
 
 process.on('SIGTERM', onExit);
 
