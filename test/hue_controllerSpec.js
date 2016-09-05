@@ -32,7 +32,7 @@ describe('hue lights controller', function (){
            let p = new Promise((resolve, reject) => {
                 item.turnOn()
                 .then(() => {
-                    item.setRgb(255, 0, 0)
+                    item.setRgb(0, 255, 0)
                     .then(() => {
                         resolve();
                     })
