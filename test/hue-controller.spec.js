@@ -25,7 +25,7 @@ describe('hue lights controller', function (){
             // then you'll get ECONNRESET back from the API sometimes.
             setTimeout(() => {
                 done()
-            }, 100)
+            }, 250)
         })
     })
 
